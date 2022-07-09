@@ -8,6 +8,6 @@ app.use("/styles", express.static("styles"));
 app.use("/imgs", express.static("imgs"));
 app.set('view engine',"ejs");
 app.use("/",indexRout);
-app.listen(3000,()=>{
+app.listen(process.env.PORT||3000,()=>{
     console.log("server run");
 })
